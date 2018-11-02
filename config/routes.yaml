@@ -1,4 +1,4 @@
-hello_page:
+starter:
   path: /starter
   controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
   defaults:
