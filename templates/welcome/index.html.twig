@@ -4,25 +4,7 @@
 {% block page_description %}Home page for experimental Symfony 4 project{% endblock %}
 
 
-{% block body %}
-
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <div class="container">
-
-                <a class="navbar-brand" href="{{ path('welcome') }}">Home</a>
-
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ path('starter') }}">Starter</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </nav>
-    </header>
+{% block content %}
 
     <main role="main" class="container main">
         <div>

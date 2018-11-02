@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Starter page</title>
-    </head>
-    <body>
+{% extends 'base.html.twig' %}
 
-       Hey Rob! Good job! Starter page
-    </body>
-</html>
+{% block title %}Starter page{% endblock %}
+{% block page_description %}Home page for experimental Symfony 4 project{% endblock %}
+
+
+{% block content %}
+
+    {#{{ dump() }}#}
+
+    <main role="main" class="container main">
+        <div>
+            <h2>Hello {{ app.request.query.get('name') | default('Robert Saternus') }}</h2>
+        </div>
+    </main>
+
+
+{% endblock %}
