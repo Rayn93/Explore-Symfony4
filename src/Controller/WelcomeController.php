@@ -18,4 +18,16 @@ class WelcomeController extends AbstractController
         ]);
 
     }
+
+
+    /**
+     * @Route("starter", name="starter")
+     */
+    public function starter()
+    {
+        return $this->render('welcome/starter.html.twig');
+
+    }
+
+
 }
