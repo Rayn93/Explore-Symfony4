@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class WelcomeController extends AbstractController
@@ -23,9 +25,13 @@ class WelcomeController extends AbstractController
     /**
      * @Route("starter", name="starter")
      */
-    public function starter()
+    public function starter(Request $request)
     {
-        return $this->render('welcome/starter.html.twig');
+        return $this->render('welcome/starter.html.twig',
+            [
+                'guest_name' => $request->get('name', 'Robert Saternus')
+            ]
+        );
 
     }
 
