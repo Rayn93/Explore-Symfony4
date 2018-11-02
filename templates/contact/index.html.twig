@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+
+
+{% block content %}
+
+    <main role="main" class="container main">
+        <div>
+            <h1>Contact form</h1>
+
+            {{ form_start(our_form) }}
+            {{ form_widget(our_form) }}
+
+            <input type="submit" value="Send">
+            {{ form_end(our_form) }}
+
+
+        </div>
+    </main>
+
+
+{% endblock %}
